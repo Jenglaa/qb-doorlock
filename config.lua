@@ -8,7 +8,7 @@ Config.FallbackDistance = 3.0 -- Distance to fall back on when it is not set
 Config.EnableSounds = true -- Enable sounds when unlocking/locking doors (doors triggered by scripts can have the sound manually disabled)
 Config.EnableAnimation = true -- Enable the animation when unlocking/locking doors (doors triggered by scripts can have the animation manually disabled)
 
-Config.ChangeColor = false -- Change the color of the box of the popup text based on if it is locked or not
+Config.ChangeColor = true -- Change the color of the box of the popup text based on if it is locked or not
 Config.DefaultColor = 'rgb(19, 28, 74)' -- The default color of the box of the popup text if Config.ChangeColor is false
 Config.LockedColor = 'rgb(219 58 58)' -- The color of the box of the popup text if Config.ChangeColor is true and the door is locked
 Config.UnlockedColor = 'rgb(27 195 63)' -- The color of the box of the popup text if Config.ChangeColor is true and the door is unlocked
@@ -175,322 +175,792 @@ Config.DoorList = {
 	},
 	------------------------------------------Always add new doors below this line for your bank robberies to work!!!---------------------------------
 				------------------------------------------End Fixed Doors!!!---------------------------------
-	{
-		textCoords = vec3(434.81, -981.93, 30.89),
-		authorizedJobs = { 'police' },
-		locked = false,
-		pickable = false,
-		distance = 2.5,
-		doors = {
-			{
-				objName = 'v_ilev_ph_door01',
-				objYaw = -90.0,
-				objCoords = vec3(434.7, -980.6, 30.8)
-			},
-
-			{
-				objName = 'v_ilev_ph_door002',
-				objYaw = -90.0,
-				objCoords = vec3(434.7, -983.2, 30.8)
+	
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 0.0,
+			objCoords = vector3(440.5201, -977.6011, 30.82319),
+			textCoords = vector3(440.5201, -977.6011, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		{
+			objName = "gabz_mrpd_door_05",
+			objYaw = 180.0,
+			objCoords = vector3(440.5201, -986.2335, 30.82319),
+			textCoords = vector3(440.5201, -986.2335, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 90.0,
+			objCoords = vector3(445.4067, -984.2014, 30.82319),
+			textCoords = vector3(445.4067, -984.2014, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		{ -- DOOR NUM.5 , COP TALKER.
+			textCoords = vector3(438.1971, -993.9113, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = 90.0,
+					objCoords = vector3(438.1971, -996.3167, 30.82319)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = -90.0,
+					objCoords = vector3(438.1971, -993.9113, 30.82319)
+				}
 			}
-		}
-	},
-	{
-		objName = 'v_ilev_ph_gendoor004',
-		objYaw = 90.0,
-		objCoords  = vec3(450.13, -986.88, 30.69),
-		textCoords = vec3(450.13, -986.88, 30.69),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5,
-	},
-	-- Rooftop
-	{
-		objName = 'v_ilev_gtdoor02',
-		objYaw = 90.0,
-		objCoords  = vec3(464.3, -984.6, 43.8),
-		textCoords = vec3(464.38, -983.64, 43.8),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5,
-	},
-	-- Hallway to roof
-	{
-		objName = 'v_ilev_arm_secdoor',
-		objYaw = 90.0,
-		objCoords  = vec3(461.32, -986.38, 30.69),
-		textCoords = vec3(461.32, -986.38, 30.69),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5,
-	},
-	-- Armory
-	{
-		objName = 'v_ilev_arm_secdoor',
-		objYaw = -90.0,
-		objCoords  = vec3(452.6, -982.7, 30.6), 
-		textCoords = vec3(452.95, -982.16, 30.99),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5,
-	},
-	-- Captain Office
-	{
-		objName = 'v_ilev_ph_gendoor002',
-		objYaw = -180.0,
-		objCoords  = vec3(447.72, -980.17, 30.81),
-		textCoords = vec3(447.72, -980.17, 30.81),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5,
-	},
-	-- To downstairs (double doors)
-	{
-		textCoords = vec3(444.71, -989.43, 30.92),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 2.0,
-		doors = {
-			{
-				objName = 'v_ilev_ph_gendoor005',
-				objYaw = 180.0,
-				objCoords = vec3(443.9, -989.0, 30.6)
-			},
-
-			{
-				objName = 'v_ilev_ph_gendoor005',
-				objYaw = 0.0,
-				objCoords = vec3(445.3, -988.7, 30.6)
+		},
+	
+		{ -- DOOR NUM.6 , Door side station exit.
+			textCoords = vector3(440.7392, -998.7462, 30.8153),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_reception_entrancedoor",
+					objYaw = 0.0,
+					objCoords = vector3(440.7392, -998.7462, 30.8153)
+				},
+	
+				{
+					objName = "gabz_mrpd_reception_entrancedoor",
+					objYaw = 180.0,
+					objCoords = vector3(443.0618, -998.7462, 30.8153)
+				}
 			}
-		}
-	},
-	-- Mission Row Cells
-	-- Main Cells
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 0.0,
-		objCoords  = vec3(463.45, -992.6, 25.10),
-		textCoords = vec3(463.45, -992.6, 25.10),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- Cell 1
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = -90.0,
-		objCoords  = vec3(461.89, -993.31, 25.13),
-		textCoords = vec3(461.89, -993.31, 25.13),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- Cell 2
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 90.0,
-		objCoords  = vec3(461.89, -998.81, 25.13),
-		textCoords = vec3(461.89, -998.81, 25.13),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- Cell 3
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 90.0,
-		objCoords  = vec3(461.89, -1002.44, 25.13),
-		textCoords =  vec3(461.89, -1002.44, 25.13),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Back
-	{
-		objName = 'v_ilev_gtdoor',
-		objYaw = 0.0,
-		objCoords  = vec3(464.61, -1003.64, 24.98),
-		textCoords = vec3(464.61, -1003.64, 24.98),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- Mission Row Back
-	-- Back (double doors)
-	{
-		textCoords = vec3(468.67, -1014.43, 26.48),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 2.5,
-		doors = {
-			{
-				objName = 'v_ilev_rc_door2',
-				objYaw = 0.0,
-				objCoords  = vec3(467.3, -1014.4, 26.5)
-			},
-
-			{
-				objName = 'v_ilev_rc_door2',
-				objYaw = 180.0,
-				objCoords  = vec3(469.9, -1014.4, 26.5)
+		},
+	
+		{
+			objName = "gabz_mrpd_door_05",
+			objYaw = 135.0,
+			objCoords = vector3(452.2663, -995.5254, 30.82319),
+			textCoords = vector3(452.2663, -995.5254, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		--[[{
+			objName = "gabz_mrpd_door_02",
+			objYaw = 225.0,
+			objCoords = vector3(458.0894, -995.5247, 30.82319),
+			textCoords = vector3(458.0894, -995.5247, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},--]]
+	
+		{ -- DOOR 9
+			objName = "gabz_mrpd_door_05",
+			objYaw = 270.0,
+			objCoords = vector3(458.6543, -990.6498, 30.82319),
+			textCoords = vector3(458.6543, -990.6498, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 270.0,
+			objCoords = vector3(458.6543, -976.8864, 30.82319),
+			textCoords = vector3(458.6543, -976.8864, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		{ -- DOOR NUM.11 , Door side station exit.
+			textCoords = vector3(455.8862, -972.2543, 30.81531),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_reception_entrancedoor",
+					objYaw = 0.0,
+					objCoords = vector3(455.8862, -972.2543, 30.81531)
+				},
+	
+				{
+					objName = "gabz_mrpd_reception_entrancedoor",
+					objYaw = 180.0,
+					objCoords = vector3(458.2087, -972.2543, 30.81531)
+				}
 			}
-		}
-	},
-	-- Back Gate
-	{
-		objName = 'hei_prop_station_gate',
-		objYaw = 90.0,
-		objCoords  = vec3(488.8, -1017.2, 27.1),
-		textCoords = vec3(488.8, -1020.2, 30.0),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 14
-	},
-	-- Mission Row Extension
-	-- Briefing room
-	{
-		textCoords = vec3(455.86, -981.31, 26.86),
-		authorizedJobs = { 'police' },
-		locked = false,
-		pickable = false,
-		distance = 2.5,
-		doors = {
-			{
-				objName = 'v_ilev_ph_gendoor005',
-				objYaw = 90.0,
-				objCoords  = vec3(455.94, -980.57, 26.67)
-			},
-
-			{
-				objName = 'v_ilev_ph_gendoor005',
-				objYaw = 270.0,
-				objCoords  = vec3(455.85, -982.14, 26.67)
+		},
+	
+	
+		{ -- DOOR NUM.12
+			textCoords = vector3(469.4406, -987.4377, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = -90.0,
+					objCoords = vector3(469.4406, -985.0313, 30.82319)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = 90.0,
+					objCoords = vector3(469.4406, -987.4377, 30.82319)
+				}
 			}
-		}
-	},
-	-- To Breakrooms
-	{
-		objName = 'v_ilev_ph_gendoor005',
-		objYaw = 90.0,
-		objCoords  = vec3(465.62, -985.93, 25.74),
-		textCoords = vec3(465.62, -985.93, 25.74),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- New Cell 1
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 180.0,
-		objCoords  = vec3(468.57, -999.44, 25.07),
-		textCoords = vec3(468.57, -999.44, 25.07),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- New Cell 2
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 180.0,
-		objCoords  = vec3(472.16, -999.47, 25.05),
-		textCoords = vec3(472.16, -999.47, 25.05),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- New Cell 3
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 180.0,
-		objCoords  = vec3(476.4, -1007.68, 24.41),
-		textCoords = vec3(476.4, -1007.68, 24.41),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- New Cell 4
-	{
-		objName = 'v_ilev_ph_cellgate',
-		objYaw = 180.0,
-		objCoords  = vec3(480.0, -1007.7, 24.41),
-		textCoords = vec3(480.0, -1007.7, 24.41),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Photoroom
-	{
-		objName = 'v_ilev_ph_gendoor006',
-		objYaw = 0.0,
-		objCoords  = vec3(475.05, -995.08, 24.46),
-		textCoords = vec3(475.05, -995.08, 24.46),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Standplace
-	{
-		objName = 'v_ilev_ph_gendoor006',
-		objYaw = 180.0,
-		objCoords  = vec3(485.71, -996.08, 24.45),
-		textCoords = vec3(485.71, -996.08, 24.45),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Interigation 1
-	{
-		objName = 'v_ilev_ph_gendoor005',
-		objYaw = 180.0,
-		objCoords  = vec3(484.63, -999.74, 24.46),
-		textCoords = vec3(484.63, -999.74, 24.46),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Interigation 2
-	{
-		objName = 'v_ilev_ph_gendoor005',
-		objYaw = 180.0,
-		objCoords  = vec3(491.37, -999.81, 24.46),
-		textCoords = vec3(491.37, -999.81, 24.46),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
-	-- To Evidence
-	{
-		objName = 'v_ilev_ph_gendoor005',
-		objYaw = 180.0,
-		objCoords  = vec3(470.78, -992.21, 25.12),
-		textCoords = vec3(470.78, -992.21, 25.12),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.0,
-	},
+		},
+	
+	
+		{ -- DOOR NUM.13
+			textCoords = vector3(475.3837, -984.3722, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = false,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 0.0,
+					objCoords = vector3(472.9781, -984.3722, 30.82319)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 180.0,
+					objCoords = vector3(475.3837, -984.3722, 30.82319)
+				}
+			}
+		},
+	
+	
+		{  -- DOOR NUM.14 - Ambulance stuff
+			textCoords = vector3(479.7534, -988.6204, 30.82319),
+			authorizedJobs = { 'police', 'ambulance' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_04",
+					objYaw = -90.0,
+					objCoords = vector3(479.7534, -986.2151, 30.82319)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_05",
+					objYaw = -90.0,
+					objCoords = vector3(479.7534, -988.6204, 30.82319)
+				}
+			}
+		},
+	
+	
+	
+		-- Door 15:
+		{ 
+			textCoords = vector3(472.9777, -989.8247, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_04",
+					objYaw = -180.0,
+					objCoords = vector3(475.3837, -989.8247, 30.82319)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_05",
+					objYaw = 180.0,
+					objCoords = vector3(472.9777, -989.8247, 30.82319)
+				}
+			}
+		},
+	
+	
+		-- 16
+		{
+			objName = "gabz_mrpd_door_03",
+			objYaw = 90.0,
+			objCoords = vector3(479.7507, -999.629, 30.78917),
+			textCoords = vector3(479.7507, -999.629, 30.78917),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- 17
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 90.0,
+			objCoords = vector3(476.7512, -999.6307, 30.82319),
+			textCoords = vector3(476.7512, -999.6307, 30.82319),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- 18
+		{
+			objName = "gabz_mrpd_door_03",
+			objYaw = 180.0,
+			objCoords = vector3(487.4378, -1000.189, 30.78697),
+			textCoords = vector3(487.4378, -1000.189, 30.78697),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		-- Door 19:
+		{ 
+			textCoords = vector3(485.6133, -1002.902, 30.78697),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_03",
+					objYaw = -180.0,
+					objCoords = vector3(488.0184, -1002.902, 30.78697)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_03",
+					objYaw = 0.0,
+					objCoords = vector3(485.6133, -1002.902, 30.78697)
+				}
+			}
+		},
+	
+	
+	
+		-- GGGGGGGGGGGG DONE FLOOR 1 !!!!!!!!!!!!!!!!!!!!!!!
+		-- FLOOR 2 [ called main due size ]
+	
+		-- Door 2 | [Missing 1 due helicopter floor, will be in the end of config].
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 180.0,
+			objCoords = vector3(459.9454, -981.0742, 35.10398),
+			textCoords = vector3(459.9454, -981.0742, 35.10398),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 3
+		{
+			objName = "gabz_mrpd_door_05",
+			objYaw = 0.0,
+			objCoords = vector3(459.9454, -990.7053, 35.10398),
+			textCoords = vector3(459.9454, -990.7053, 35.10398),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 4
+		{
+			objName = "gabz_mrpd_door_05",
+			objYaw = 135.0,
+			objCoords = vector3(448.9868, -981.5785, 35.10376),
+			textCoords = vector3(448.9868, -981.5785, 35.10376),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+	
+		-- Door 5
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = 45.0,
+			objCoords = vector3(448.9868, -990.2007, 35.10376),
+			textCoords = vector3(448.9868, -990.2007, 35.10376),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 6
+		{
+			objName = "gabz_mrpd_door_05",
+			objYaw = 135.0,
+			objCoords = vector3(448.9846, -995.5264, 35.10376),
+			textCoords = vector3(448.9846, -995.5264, 35.10376),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+	
+		-- NO Door 1 [ Shitty helicopters - GABZ FUCK U ITS WRONG DOOR NAME -_- ]
+	
+		
+	
+		-- GGGGGGGGGGGG DONE FLOOR 2 !!!!!!!!!!!!!!!!!!!!!!!
+		-- FLOOR 0
+	
+		-- Door 3
+		{
+			objName = "gabz_mrpd_room13_parkingdoor",
+			objYaw = -90.0,
+			objCoords = vector3(464.1591, -974.6656, 26.3707),
+			textCoords = vector3(464.1591, -974.6656, 26.3707),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = false,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 4
+		{
+			objName = "gabz_mrpd_room13_parkingdoor",
+			objYaw = 90.0,
+			objCoords = vector3(464.1566, -997.5093, 26.3707),
+			textCoords = vector3(464.1566, -997.5093, 26.3707),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = false,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+		
+	
+		-- Door 5:
+		{ 
+			textCoords = vector3(471.3753, -987.4374, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_04",
+					objYaw = -90.0,
+					objCoords = vector3(471.3753, -985.0319, 26.40548)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_05",
+					objYaw = -90.0,
+					objCoords = vector3(471.3753, -987.4374, 26.40548)
+				}
+			}
+		},
+	
+	
+		
+		-- Door 10:
+		{ 
+			textCoords = vector3(479.0624, -987.4376, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = -90.0,
+					objCoords = vector3(479.0624, -985.0323, 26.40548)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 90.0,
+					objCoords = vector3(479.0624, -987.4376, 26.40548)
+				}
+			}
+		},
+	
+		-- Door 11
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = -90.0,
+			objCoords = vector3(482.6694, -983.9868, 26.40548),
+			textCoords = vector3(482.6694, -983.9868, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 12 -- FUCK U GABZ U FORGOT THE X -_-
+	
+	
+		-- Door 13
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = -90.0,
+			objCoords = vector3(482.6699, -992.2991, 26.40548),
+			textCoords = vector3(482.6699, -992.2991, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 14
+		{
+			objName = "gabz_mrpd_door_04",
+			objYaw = -90.0,
+			objCoords = vector3(482.6703, -995.7285, 26.40548),
+			textCoords = vector3(482.6703, -995.7285, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		
+		-- Door 15:
+		{ 
+			textCoords = vector3(479.6638, -997.91, 26.4065),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 180.0,
+					objCoords = vector3(482.0686, -997.91, 26.4065)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 0.0,
+					objCoords = vector3(479.6638, -997.91, 26.4065)
+				}
+			}
+		},
+	
+		-- Door 16
+		{
+			objName = "gabz_mrpd_door_02",
+			objYaw = 180.0,
+			objCoords = vector3(478.2892, -997.9101, 26.40548),
+			textCoords = vector3(478.2892, -997.9101, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		-- Door 17
+		{
+			objName = "gabz_mrpd_door_01",
+			objYaw = 89.25,
+			objCoords = vector3(479.06, -1003.173, 26.4065),
+			textCoords = vector3(479.06, -1003.173, 26.4065),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+		-- Door 18
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 180.0,
+			objCoords = vector3(481.0084, -1004.118, 26.48005),
+			textCoords = vector3(481.0084, -1004.118, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+	
+		-- Door 19
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 180.0,
+			objCoords = vector3(484.1764, -1007.734, 26.48005),
+			textCoords = vector3(484.1764, -1007.734, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+		
+	
+		-- Door 20
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 0.0,
+			objCoords = vector3(486.9131, -1012.189, 26.48005),
+			textCoords = vector3(486.9131, -1012.189, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 21
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 0.0,
+			objCoords = vector3(483.9127, -1012.189, 26.48005),
+			textCoords = vector3(483.9127, -1012.189, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+	
+		-- Door 22
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 0.0,
+			objCoords = vector3(480.9128, -1012.189, 26.48005),
+			textCoords = vector3(480.9128, -1012.189, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 23
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = 0.0,
+			objCoords = vector3(477.9126, -1012.189, 26.48005),
+			textCoords = vector3(477.9126, -1012.189, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+	
+	
+		-- Door 24
+		{
+			objName = "gabz_mrpd_cells_door",
+			objYaw = -90.0,
+			objCoords = vector3(476.6157, -1008.875, 26.48005),
+			textCoords = vector3(476.6157, -1008.875, 26.48005),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},
+		
+	
+		--[[ Door 25
+		{
+			objName = "gabz_mrpd_door_01",
+			objYaw = 180.0,
+			objCoords = vector3(475.9539, -1006.938, 26.40639),
+			textCoords = vector3(475.9539, -1006.938, 26.40639),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.0,
+			size = 2
+		},]]
+	
+		-- Door 26 missing.
+		
+	
+		-- Door 7
+		{ 
+			textCoords = vector3(471.3758, -1010.198, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = -90.0,
+					objCoords = vector3(471.3679, -1007.793, 26.40548)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_02",
+					objYaw = 90.0,
+					objCoords = vector3(471.3758, -1010.198, 26.40548)
+				}
+			}
+		},
+	
+	
+		-- Door 8
+		{ 
+			textCoords = vector3(467.3686, -1014.406, 26.48382),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_03",
+					objYaw = 180.0,
+					objCoords = vector3(469.7743, -1014.406, 26.48382)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_03",
+					objYaw = 0.0,
+					objCoords = vector3(467.3686, -1014.406, 26.48382)
+				}
+			}
+		},
+	
+	
+	
+		-- Door 9
+		{ 
+			textCoords = vector3(467.5222, -1000.544, 26.40548),
+			authorizedJobs = { 'police' },
+			locking = false,
+			locked = true,
+			pickable = false,
+			distance = 2.5,
+			doors = {
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = 180.0,
+					objCoords = vector3(469.9274, -1000.544, 26.40548)
+				},
+	
+				{
+					objName = "gabz_mrpd_door_01",
+					objYaw = 0.0,
+					objCoords = vector3(467.5222, -1000.544, 26.40548)
+				}
+			}
+		},
+	
+	
 	-- Bureau Paleto Bay
 	{
 		textCoords = vec3(-435.57, 6008.76, 27.98),
@@ -1155,4 +1625,96 @@ Config.DoorList = {
 		pickable = false,
 		distance = 2.0
 	},
+
+	-- Burger Shot
+
+	-- Employess area entrance
+	{
+        objName = -1300743830,
+        objYaw = 124.05,
+        objCoords  = vector3(-1178.958, -891.9232, 13.984591),
+        textCoords = vector3(-1178.958, -891.9232, 13.984591),
+        authorizedJobs = { 'burgershot' },
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+    },
+	-- Entrance
+    {
+        textCoords = vector3(-1184.246, -884.8125, 14.032447),
+        authorizedJobs = { 'burgershot' },
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doors = {
+            {
+                objName = 1934064671,
+                objYaw = 124.06,
+                objCoords  = vector3(-1183.637, -885.0944, 13.984714)
+
+            },
+            {
+                objName = -186646702,
+                objYaw = 124.02,
+                objCoords  = vector3(-1184.539, -884.0463, 13.984724)
+            }
+        }
+    },
+	-- Entrance
+    {
+        textCoords = vector3(-1197.574, -884.5406, 14.023283),
+        authorizedJobs = { 'burgershot' },
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2,
+        doors = {
+            {
+                objName = 1934064671,
+                objYaw = 213.95,
+                objCoords  = vector3(-1197.307, -884.1141, 13.984729)
+            },
+            {
+                objName = -186646702,
+                objYaw = 214.01,
+                objCoords  = vector3(-1198.444, -884.5676, 13.981176)
+            }
+        }
+    },
+	{
+        objName = -1448591934,
+        objYaw = 33.98,
+        objCoords  = vector3(-1200.344, -892.5028, 13.995201),
+        textCoords = vector3(-1200.344, -892.5028, 13.995201),
+        authorizedJobs = { 'burgershot' },
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2,
+    },
+    {
+		objName = -1300743830,
+        objYaw = 304.0,
+        objCoords  = vector3(-1199.335, -903.278, 13.998657),
+        textCoords = vector3(-1199.335, -903.278, 13.998657),
+        authorizedJobs = { 'burgershot' },
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2,
+    },
+	-- To Boss Room
+	{
+		objName = 1042741067,
+        objYaw = 213.92,
+        objCoords  = vector3(-1181.675, -895.125, 14.004563),
+        textCoords = vector3(-1181.675, -895.125, 14.004563),
+        authorizedJobs = { ['burgershot'] = 4 } ,
+        locking = false,
+        locked = true,
+        pickable = false,
+        distance = 2,
+    },
 }

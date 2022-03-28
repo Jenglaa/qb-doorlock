@@ -125,3 +125,21 @@ Config.DoorList['ward-b2'] = {
     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
     autoLock = 5000,
 }
+
+-- garage_doubledoor2 created by Mvzz
+Config.DoorList['garage_doubledoor2'] = {
+    doorRate = 1.0,
+    distance = 2,
+    doorType = 'double',
+    pickable = false,
+    locked = true,
+    audioRemote = false,
+    doors = {
+        {objName = -434783486, objYaw = 70.006050109863, objCoords = vec3(338.446655, -590.052979, 28.947092)},
+        {objName = -1700911976, objYaw = 70.006050109863, objCoords = vec3(339.326599, -587.634521, 28.947092)}
+    },
+    authorizedJobs = { ['ambulance'] = 0 },
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    autoLock = 5000,
+}

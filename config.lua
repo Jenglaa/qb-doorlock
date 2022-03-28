@@ -181,26 +181,26 @@ Config.DoorList = {
 	------------------------------------------
 
 	-- gabz_mrpd    FRONT DOORS
-	{
-		maxDistance = 2,
-		locked = false,
-		lockpick = true,
-		doors = {
-			{
-				objHash = -1547307588,
-				objHeading = 90,
-				objCoords = vector3(434.7444, -983.0781, 30.8153),
-			},
-			{
-				objHash = -1547307588,
-				objHeading = 270,
-				objCoords = vector3(434.7444, -980.7556, 30.8153),
-			},
-		},
-		authorizedJobs = {
-			'police'
-		}
-	},
+	-- {
+	-- 	maxDistance = 2,
+	-- 	locked = false,
+	-- 	lockpick = true,
+	-- 	doors = {
+	-- 		{
+	-- 			objHash = -1547307588,
+	-- 			objHeading = 90,
+	-- 			objCoords = vector3(434.7444, -983.0781, 30.8153),
+	-- 		},
+	-- 		{
+	-- 			objHash = -1547307588,
+	-- 			objHeading = 270,
+	-- 			objCoords = vector3(434.7444, -980.7556, 30.8153),
+	-- 		},
+	-- 	},
+	-- 	authorizedJobs = {
+	-- 		'police'
+	-- 	}
+	-- },
 
 	-- gabz_mrpd    NORTH DOORS
 	{
@@ -680,7 +680,7 @@ Config.DoorList = {
 		objCoords = vector3(410.0258, -1024.226, 29.22022),
 		objHeading = 270,
 		slides = true,
-		maxDistance = 69,
+		maxDistance = 9,
 		garage = true,
 		objHash = -1868050792,
 		setText = true,
@@ -1467,4 +1467,118 @@ Config.DoorList = {
         pickable = false,
         distance = 2,
     },
+
+	-- Mechanic
+
+	-- double door Boss Room
+	{
+		lockpick = false,
+		audioRemote = false,
+		maxDistance = 2.5,
+		locked = true,
+		doorID = 63,
+		doors = {
+			{objHash = 1142444161, objHeading = 263.88201904297, objCoords = vector3(-334.6126, -154.3659, 43.59727)},
+			{objHash = 1142444161, objHeading = 83.019134521484, objCoords = vector3(-334.879, -156.7008, 43.59879)}
+		},
+		authorizedJobs = { ['mechanic']=4 },
+		slides = false,
+	},
+
+-- single door atas
+	{
+		objCoords = vector3(-334.9883, -162.2828, 43.59594),
+		audioRemote = false,
+		slides = false,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 64,
+		fixText = false,
+		objHash = 1142444161,
+		locked = true,
+		lockpick = false,
+		objHeading = 95.0,
+		maxDistance = 2.0,
+		garage = false,
+	},
+
+-- storage_ingaragedoor
+	{
+		objCoords = vector3(-341.7755, -166.5323, 38.01139),
+		audioRemote = false,
+		slides = true,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 65,
+		fixText = false,
+		objHash = 1157738230,
+		locked = true,
+		lockpick = false,
+		objHeading = 119.57181549072,
+		maxDistance = 6.0,
+		garage = false,
+	},
+
+-- storage_outgaragedoor
+	{
+		objCoords = vector3(-360.2168, -154.9366, 37.7263),
+		audioRemote = false,
+		slides = true,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 66,
+		fixText = false,
+		objHash = 260701421,
+		locked = true,
+		lockpick = false,
+		objHeading = 29.979843139648,
+		maxDistance = 6.0,
+		garage = true,
+	},
+
+-- storage_garagedoor1
+	{
+		objCoords = vector3(-371.9531, -99.5879, 38.01236),
+		audioRemote = false,
+		slides = true,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 67,
+		fixText = false,
+		objHash = 260701421,
+		locked = true,
+		lockpick = false,
+		objHeading = 340.00003051758,
+		maxDistance = 6.0,
+		garage = true,
+	},
+
+-- storage_garagedoor2
+	{
+		objCoords = vector3(-364.97, -102.1295, 38.00655),
+		audioRemote = false,
+		slides = true,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 68,
+		fixText = false,
+		objHash = 260701421,
+		locked = true,
+		lockpick = false,
+		objHeading = 339.89935302734,
+		maxDistance = 6.0,
+		garage = true,
+	},
+
+-- storage_garagedoor3
+	{
+		objCoords = vector3(-356.137, -134.796, 38.01285),
+		audioRemote = false,
+		slides = true,
+		authorizedJobs = { ['mechanic']=0 },
+		doorID = 69,
+		fixText = false,
+		objHash = 1542392972,
+		locked = true,
+		lockpick = false,
+		objHeading = 69.998397827148,
+		maxDistance = 6.0,
+		garage = true,
+	},
+
 }
